@@ -1,7 +1,7 @@
 # routing4imagery
 
 routing4imagery is a set of programs that is able to convert an OSM PBF file into a text file with an optimized path that solves the
-Chinese postman problem. The Chinese postman problem attempts to find the shortest path that visits every edge in an undirected graph.
+route inspection problem. The route inspection problem attempts to find the shortest path that visits every edge in an undirected graph.
 To solve this, we created a workflow using several open source and custom programs to accomplish this task efficiently. This pipeline can
 be automated using bash scripting, given that all packages required are correctly installed.
 
@@ -27,11 +27,11 @@ We will take the exported PBF file from HOT export tool and create two csv files
 and their lengths. From there, the two files undergo preprocessing and reformatting to be compatible with the python package that will compute the Chinese 
 postman route.
 
-There is a separate python script which is not part of the main workflow, but is useful to visualize the graph and overall route as an image.
+There is a separate Python notebook which is not part of the main workflow, but is useful to visualize the graph and overall route as an image.
 
-Open source github packgages that are used within this pipeline will be automatically cloned into the working directory through the bash script.
+Open-source Github packgages that are used within this pipeline will be automatically cloned into the working directory through the bash script.
 
 # Notes
 
-The efficiency of the Chinese postman problem is considerably slow. As a result, running very large inputs may take a very long time. In addition,
+The efficiency of the route inspection problem is considerably slow. As a result, running very large inputs may take a very long time. In addition,
 this is not a finished product, as we still continue to improve the workflow and fix bugs that arise.
