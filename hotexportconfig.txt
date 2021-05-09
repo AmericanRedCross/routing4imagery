@@ -1,0 +1,32 @@
+Buildings:
+  types:
+    - polygons
+  select:
+    - name
+    - building
+    - building:levels
+    - building:materials
+    - addr:full
+    - addr:housenumber
+    - addr:street
+    - addr:city
+    - office
+  where: building IS NOT NULL
+
+Roads:
+  types:
+    - lines
+  select:
+    - bridge
+    - highway
+    - layer
+    - name
+    - oneway
+    - smoothness
+    - surface
+    - tunnel
+    - width
+  where:
+    - highway IS NOT NULL
+
+//select buildings, select transportation: roads
