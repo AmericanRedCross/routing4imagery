@@ -2,7 +2,7 @@
 
 routing4imagery is a set of programs that is able to convert an OSM PBF file into a text file with an optimized path that solves the
 route inspection problem. The route inspection problem attempts to find the shortest path that visits every edge in an undirected graph.
-To solve this, we created a workflow using several open source and custom programs to accomplish this task efficiently. This pipeline can
+routing4imagery uses several open-source and custom programs to accomplish this task efficiently. This pipeline can
 be automated using bash scripting, given that all packages required are correctly installed.
 
 # Requirements
@@ -16,22 +16,21 @@ for best results:
 
 # Usage
 
-The file, runrouting4imagery.sh, should prompt the user the files they would like to input to generate a route. There will be an output csv file
+Running runrouting4imagery.sh will prompt the user for the files from which they would like to generate a route. There will be an output csv file
 that represents the order of nodes in the route.
 * The input of the files should be directly exported from the HOT Export tool linked [here](https://export.hotosm.org/en/v3/). The feature selection
-settings will also be included in this github named hotexportconfig.txt.
+settings will also be included in this repository, named hotexportconfig.txt.
 
 # Workflow
 
-We will take the exported PBF file from HOT export tool and create two csv files as output. One will contain a list of nodes and the other will contain a list of edges
-and their lengths. From there, the two files undergo preprocessing and reformatting to be compatible with the python package that will compute the Chinese 
-postman route.
+We take the exported PBF file from the HOT export tool and create two csv files. One will contain a list of nodes and the other will contain a list of edges
+and their lengths. From there, the two files undergo preprocessing and reformatting to be compatible with a Python package that will solve the route inspection problem.
 
-There is a separate Python notebook which is not part of the main workflow, but is useful to visualize the graph and overall route as an image.
+There is a Python notebook that is distinct from the main workflow but useful to visualize the graph and route.
 
-Open-source Github packgages that are used within this pipeline will be automatically cloned into the working directory through the bash script.
+Open-source Github repositories that are used in this pipeline will be cloned automatically into the working directory.
 
 # Notes
 
 The efficiency of the route inspection problem is considerably slow. As a result, running very large inputs may take a very long time. In addition,
-this is not a finished product, as we still continue to improve the workflow and fix bugs that arise.
+this is not a finished product, and we still continue to improve the workflow and fix bugs that arise. Please submit an issue if you have any feedback/suggestions.
